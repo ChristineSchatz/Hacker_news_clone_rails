@@ -7,34 +7,38 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav>
-  <ul>
-  <% if session[:user_id] %>
-  <%= link_to "Logout", logout_path %>
-  <% else %>
-  simply put: cool site with cool shit!
 
-  <li>New to Hacker News? sign up here<%=form_for @user do |f|%>
-    <%= f.text_field :username %>
-    <%= f.password_field :password %>
-    <%= f.submit %>
-    <% end %></li>
-   <li>Already a user? <%=form_for(@user, url: '/login') do |f|%>
-    <%=f.label :username%>
-    <%=f.text_field :username%>
-    <%=f.label :password%>
-    <%=f.password_field :password%>
-    <%=f.submit "Log In"%>
-    <%end%></li>
-    <li><h4>new</h4></li> |
-    <li><h4>comments</h4></li>
-  </ul>
-  </nav>
+
+     <nav>
+      <ul>
+      <% if session[:user_id] %>
+      <%= link_to "Logout", logout_path %>
+      <% else %>
+        <li>New to Hacker News? sign up here<%=form_for @user do |f|%>
+          <%= f.text_field :username %>
+          <%= f.password_field :password %>
+          <%= f.submit %>
+      <% end %></li>
+         <li>Already a user? <%=form_for(@user, url: '/login') do |f|%>
+          <%=f.label :username%>
+          <%=f.text_field :username%>
+          <%=f.label :password%>
+          <%=f.password_field :password%>
+          <%=f.submit "Log In"%>
+          <%end%>
+        </li>
+        <li><h4>new</h4></li> |
+        <li><h4>comments</h4></li>
+      </ul>
+    </nav>
   <% end %>
-<div id="hacker_menu">
-  <h1>Hacker News</h1>
+
+
+<div id="container">
+<h1>Hacker News</h1>
 <%= yield %>
 </div>
+
 
 </body>
 </html>

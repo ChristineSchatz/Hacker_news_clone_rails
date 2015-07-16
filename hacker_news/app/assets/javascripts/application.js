@@ -14,3 +14,25 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function()) {
+  $('.vote_count').on('click', function(event) {
+    var $target = $(event.target);
+    $target.val("Voting..");
+     $.ajax( {
+       type: $form.attr('method'),
+        url: $form.attr('action')
+        method: "put",
+        dataType: "JSON"
+        data: $target.serialize(),
+     }).done(function(response) {
+      $("#vote_area").text(response.post_votes);
+
+     });
+
+
+  });
+
+
+
+});
