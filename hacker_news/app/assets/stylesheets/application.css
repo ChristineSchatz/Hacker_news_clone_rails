@@ -24,3 +24,20 @@ nav {
 body {
   font-family: Verdana, Geneva, sans-serif;
 }
+
+#hacker_menu {
+  background-color: beige;
+}
+
+.vote {
+  color: black;
+}
+
+a {
+  color: gray;
+  text-decoration: none
+}
+
+a: visited {
+  color: gray;
+}

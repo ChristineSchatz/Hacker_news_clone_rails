@@ -3,6 +3,7 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :title, null: false
       t.string :body, null: false
+      t.integer :votes
       t.integer :user_id, null: false
 
       t.timestamps null: false

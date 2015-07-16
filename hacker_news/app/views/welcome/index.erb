@@ -1,3 +1,3 @@
 <% @posts.each_with_index do |post, i| %>
-  <div><%= link_to 'show', post_path(post.id) %><%= "#{i+1}. " + post.title %> <a href="/">vote up!</a></div>
+  <div><%= "#{i+1}. " %><%= link_to (post.title),  post_path(post.id) %>  (<%= find_user(post)%>) (# votes) &nbsp&nbsp <a class="vote" href="/">vote up!</a></div>
 <% end %>
