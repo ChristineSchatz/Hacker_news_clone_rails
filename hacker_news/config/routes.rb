@@ -7,13 +7,13 @@ Rails.application.routes.draw do
   resources :users
 
   resources :posts do
-    resources :comments
+    resources :comments, except: [:index, :show]
   end
 
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  get 'signup' => 'users#new'
-  get 'logout' => 'sessions#destroy'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/signup' => 'users#new'
+  get '/logout' => 'sessions#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -7,11 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav>
+  <% if @authenticated %>
+  <%= link_to logout_path %>
+  <% else %>
+  <ul>
+  New to Hacker News? sign up here
+  <li><%=form_for @user do |f|%>
+    <%= f.text_field :username %>
+    <%= f.password_field :password %>
+    <%= f.submit %>
+    <% end %></li>
+    <li><h4>new</h4></li> |
+    <li><h4>comments</h4></li>
+  </ul>
+  </nav>
+  <% end %>
 
-
-  <br>
-  <br>
 <%= yield %>
-<%= link_to "Back Home", root_path %>
+
 </body>
 </html>
