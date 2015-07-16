@@ -8,7 +8,16 @@
 </head>
 <body>
 
+<!-- if @logged_in %>
+  <nav>
+  <%= link_to @current_user.username, user_path(@current_user) %>
+  <%= link_to 'Logout', logout_path %>
+    </nav>
+    <% end %>
+  -->
+  <br>
+  <br>
 <%= yield %>
-
+<%= link_to "Back Home", root_path %>
 </body>
 </html>
