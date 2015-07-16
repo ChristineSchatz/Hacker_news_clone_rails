@@ -14,10 +14,13 @@ users = [
 ]
 
 posts = [
-   { title: "The Web’s Cruft Problem", body: "Blah blah blah blah", user_id: 1},
-   { title: "Finnish Defence Forces Cyber Challenge", body: "Blah blah blah blah", user_id: 2},
-   { title: "Finnish Defence Forces Cyber Challenge", body: "Blah blah blah blah", user_id: 4},
-   { title: "Estimate the cost of a Web, iOS or Android app", body: "Blah blah blah blah", user_id: 3}
+   { title: "The Web’s Cruft Problem", body: "Blah blah blah blah", user_id: 1, votes: 0},
+   { title: "Finnish Defence Forces Cyber Challenge", body: "Blah blah blah blah", user_id: 2, votes: 0},
+   { title: "How to learn data science", body: "Blah blah blah blah blah", user_id: 3, votes: 0},
+   { title: "Finnish Defence Forces Cyber Challenge", body: "Blah blah blah blah", user_id: 4, votes: 0},
+   { title: "Estimate the cost of a Web, iOS or Android app", body: "Blah blah blah blah", user_id: 3, votes: 0},
+   { title: "Pyxley: Python Powered Dashboards", body: "blah blah blah", user_id: 3, votes: 0},
+   { title: "RethinkDB 2.1 beta: automatic failover with Raft", body: "blah blah blah", user_id: 2, votes: 0}
 ]
 
 users.each do |user|
