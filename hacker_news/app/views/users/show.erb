@@ -1,0 +1,9 @@
+<% @user_posts.each do |post| %>
+ <div><%= link_to post.title, user_path(post.user_id, post) %> </div>
+  <% if show_edit_actions(post) %>
+      <div><%= link_to 'edit', edit_post_path(post.user_id, post) %></div>
+      <div><%= link_to 'delete', :method => :delete %></div>
+  <% end %>
+  <%end %>
+  <br><br>
+<%= link_to "create new post!", new_post_path(@user) %>
