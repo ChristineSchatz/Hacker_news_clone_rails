@@ -1,0 +1,6 @@
+<div><%= @post.title %></div>
+<div><%= @post.body %></div>
+
+<div><%= link_to 'edit', edit_post_path(@post) %></div>
+<div><%= link_to 'delete', :method => :delete %></div>
+

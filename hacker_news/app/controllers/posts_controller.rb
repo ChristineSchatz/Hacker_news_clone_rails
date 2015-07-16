@@ -5,9 +5,10 @@ class PostsController < ApplicationController
   end
 
   def create
+    user = User.find_by_id(session[:user_id])
     post = Post.new(post_params)
-    user = User.find_by(params[:user_id])
-    user.posts << post
+    post.user = user
+    post.save
     redirect_to :root
   end
 
@@ -17,10 +18,12 @@ class PostsController < ApplicationController
   end
 
   def edit
-
+    @post = Post.find_by_id(params[:id])
   end
 
   def update
+    Post.update(params[:id], post_params)
+    redirect_to :root
   end
 
   def destroy
@@ -30,6 +33,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :user_id)
   end
 end
