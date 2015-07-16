@@ -25,13 +25,18 @@ body {
   font-family: Verdana, Geneva, sans-serif;
 }
 
-#hacker_menu {
+#container {
+  width: 100%;
   background-color: beige;
-
+  margin: 0 auto;
 }
 
 .vote {
   color: black;
+}
+
+.small {
+  font-size: 0.7em;
 }
 
 a {
