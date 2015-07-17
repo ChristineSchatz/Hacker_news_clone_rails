@@ -43,13 +43,23 @@ body {
   font-size: 0.7em;
   }
 
+.comments {
+  font-size: 0.9em;
+  color: #003366;
+}
+
 a {
   color: #4B4B4B;
   text-decoration: none
 }
 
-a: visited {
-  color: gray;
+a:link {
+  color: #4B4B4B;
+}
+
+
+a:hover {
+  color: purple;
 }
 
 li {

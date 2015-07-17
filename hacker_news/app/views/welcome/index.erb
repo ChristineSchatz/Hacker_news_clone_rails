@@ -1,7 +1,7 @@
 
 <% @posts.each_with_index do |post, i| %>
   <div><%= "#{i+1}. " %><%= link_to (post.title),  post_path(post.id) %> <span class="small">(posted_by: <span class="name"><%= find_user(post)%>)</span></span><span class="small"> votes: </span> <span class="vote-area"><%= post.votes %></span><form action="/post/<%= post.id %>/up_vote" method="POST">
-    <input type="submit" class="vote-count" value="Up Vote!">
+    <input type="submit" class="vote-count" value="^">
   </form>
   <span class="small"><%= post.created_at %></span>
 <% end %>

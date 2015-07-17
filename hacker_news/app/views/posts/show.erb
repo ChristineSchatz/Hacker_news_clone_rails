@@ -1,11 +1,13 @@
 <div><%= @post.title %></div>
 <div><%= @post.body %></div>
-
+<br>
+<h5>comments:</h5>
+<span class="comments">
 <% @post.comments.each do |comment| %>
-  <li><%= comment.body %>
+  <li><%= comment.body %></li><br>
 <% end %>
-
-<div><%= link_to 'comment', new_post_comment_path(@post) %>
-<div><%= link_to 'edit', edit_post_path(@post) %></div>
-<div><%= link_to 'delete', @post, :method => :delete %></div>
+</span>
+<br>
+<br>
+<div><%= link_to 'comment', new_post_comment_path(@post) %> | <%= link_to 'edit', edit_post_path(@post) %> | <%= link_to 'delete', @post, :method => :delete %></div>
 
