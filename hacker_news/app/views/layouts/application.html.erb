@@ -10,7 +10,8 @@
      <nav>
       <ul>
       <% if session[:user_id] %>
-      <%= link_to "Logout", logout_path %>
+      <%= link_to "Logout", logout_path %>&nbsp
+      <%= link_to "Your Profile Page", user_path(session[:user_id]) %>
       <% else %>
         <li>New to Hacker News? sign up here<%=form_for @user do |f|%>
           <%= f.text_field :username %>

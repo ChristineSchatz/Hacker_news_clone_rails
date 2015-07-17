@@ -6,11 +6,15 @@ class CommentsController < ApplicationController
   end
 
   def create
-    post = Post.find_by_id(params[:id])
+    post = Post.find_by_id(params[:post_id])
     comment = Comment.new(comment_params)
-
-    comment.save
-    redirect :root
+    comment.post = post
+    comment.user_id = session[:user_id]
+    if comment.save
+      redirect_to post, notice: "Comment added!"
+    else
+      redirect_to post, notice: {errors: "Invalid comment."}
+    end
   end
 
   def update

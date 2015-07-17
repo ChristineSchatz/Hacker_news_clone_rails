@@ -19,8 +19,8 @@ $(document).ready(function() {
   $('.vote-count').on('click', function(event) {
     event.preventDefault();
     $target = $(event.target);
-    $target.val("Voting..");
-    $target.attr("disabled", "true");
+    // my user can vote as many times. cheating is allowed! nobody cares...! votes are good!
+    //$target.attr("disabled", "true");
     $form = $target.parent();
 
      $.ajax( {
@@ -29,10 +29,7 @@ $(document).ready(function() {
         data: $target.serialize(),
         dataType: "JSON"
      }).done(function(response) {
-
-
        $form.parent().children('.vote-area').html(response.post_votes);
      });
-
   });
 });

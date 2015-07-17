@@ -1,6 +1,10 @@
 <div><%= @post.title %></div>
 <div><%= @post.body %></div>
 
+<% @post.comments.each do |comment| %>
+  <li><%= comment.body %>
+<% end %>
+
 <div><%= link_to 'comment', new_post_comment_path(@post) %>
 <div><%= link_to 'edit', edit_post_path(@post) %></div>
 <div><%= link_to 'delete', @post, :method => :delete %></div>
