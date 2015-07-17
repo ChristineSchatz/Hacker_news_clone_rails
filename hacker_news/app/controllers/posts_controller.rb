@@ -38,10 +38,6 @@ class PostsController < ApplicationController
 
   end
 
-  def votes
-    self.votes.size
-  end
-
   def destroy
     Post.find_by_id(params[:id]).destroy
     redirect_to :root

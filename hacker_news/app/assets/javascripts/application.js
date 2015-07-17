@@ -16,7 +16,7 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $('.vote_count').on('click', function(event) {
+  $('.vote-count').on('click', function(event) {
     event.preventDefault();
     $target = $(event.target);
     $target.val("Voting..");
@@ -30,15 +30,9 @@ $(document).ready(function() {
         dataType: "JSON"
      }).done(function(response) {
 
-      $("#vote_area").text(response.post_votes);
-       console.log(response);
-       console.log(response.post_votes);
-       $form.parent().children('#vote_area').html(response.post_votes);
-       $target.val("voted!");
+
+       $form.parent().children('.vote-area').html(response.post_votes);
      });
 
   });
-
-
-
 });
