@@ -15,21 +15,27 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function()) {
+$(document).ready(function() {
   $('.vote_count').on('click', function(event) {
-    var $target = $(event.target);
+    event.preventDefault();
+    $target = $(event.target);
     $target.val("Voting..");
+    $target.attr("disabled", "true");
+    $form = $target.parent();
+
      $.ajax( {
-       type: $form.attr('method'),
-        url: $form.attr('action')
-        method: "put",
-        dataType: "JSON"
+        type: $form.attr('method'),
+        url: $form.attr('action'),
         data: $target.serialize(),
+        dataType: "JSON"
      }).done(function(response) {
+
       $("#vote_area").text(response.post_votes);
-
+       console.log(response);
+       console.log(response.post_votes);
+       $form.parent().children('#vote_area').html(response.post_votes);
+       $target.val("voted!");
      });
-
 
   });
 

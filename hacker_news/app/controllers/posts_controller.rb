@@ -29,13 +29,17 @@ class PostsController < ApplicationController
   def up_vote
     @post = Post.find_by_id(params[:id])
     @post.increment!(:votes)
+    @post_votes = @post.votes
     if request.xhr?
-      return {post_votes: @post.votes}.to_json
-      #head :ok
+      render json: {post_votes: @post_votes}.to_json
     else
       redirect_to @post
     end
 
+  end
+
+  def votes
+    self.votes.size
   end
 
   def destroy

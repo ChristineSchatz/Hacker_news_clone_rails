@@ -1,6 +1,8 @@
-<ul>
+
 <% @posts.each_with_index do |post, i| %>
-  <div><li><%= "#{i+1}. " %><%= link_to (post.title),  post_path(post.id) %>  (<%= find_user(post)%>) <span id="vote_area">(votes: <%= post.votes %>)</span> <%= link_to "⇧", up_vote_path(post), class: "vote_count", method: :put, remote: true %></div>
-  <span class="small"><%= post.created_at %></span></li>
+  <div><%= "#{i+1}. " %><%= link_to (post.title),  post_path(post.id) %>  (<%= find_user(post)%>) votes: <span id="vote_area"><%= post.votes %></span><form action="/post/<%= post.id %>/up_vote" method="POST">
+    <input type="submit" class="vote_count" value="Up Vote!">
+  </form>
+  <span class="small"><%= post.created_at %></span>
 <% end %>
-</ul>
+
