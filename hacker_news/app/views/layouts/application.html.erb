@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
      <nav>
       <ul>
       <% if session[:user_id] %>
@@ -18,12 +19,12 @@
           <%= f.password_field :password %>
           <%= f.submit %>
       <% end %></li>
-         <li>Already a user? <%=form_for(@user, url: '/login') do |f|%>
-          <%=f.label :username%>
-          <%=f.text_field :username%>
-          <%=f.label :password%>
-          <%=f.password_field :password%>
-          <%=f.submit "Log In"%>
+         <li>Already a user? <%=form_tag controller: 'sessions', action: :create do%>
+          <%= label_tag :username%>
+          <%= text_field_tag :username%>
+          <%= label_tag :password%>
+          <%= password_field_tag :password%>
+          <%= submit_tag "Log In"%>
           <%end%>
         </li>
         <li><h4>new</h4></li> |
@@ -33,8 +34,11 @@
   <% end %>
 
 
+
 <div id="container">
 <h1>Hacker News</h1>
+<%= render 'shared/flash_messages' %>
+<%= render 'shared/header' %>
 <%= yield %>
 </div>
 
