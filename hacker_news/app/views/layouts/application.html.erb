@@ -7,39 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
      <nav>
-      <ul>
-      <% if session[:user_id] %>
-      <%= link_to "Logout", logout_path %>&nbsp
-      <%= link_to "Your Profile Page", user_path(session[:user_id]) %>
-      <% else %>
-        <li>New to Hacker News? sign up here<%=form_for @user do |f|%>
-          <%= f.text_field :username %>
-          <%= f.password_field :password %>
-          <%= f.submit %>
-      <% end %></li>
-         <li>Already a user? <%=form_tag controller: 'sessions', action: :create do%>
-          <%= label_tag :username%>
-          <%= text_field_tag :username%>
-          <%= label_tag :password%>
-          <%= password_field_tag :password%>
-          <%= submit_tag "Log In"%>
-          <%end%>
-        </li>
-        <li><h4>new</h4></li> |
-        <li><h4>comments</h4></li>
-      </ul>
+       <%= render 'shared/header' %>
     </nav>
-  <% end %>
-
-
 
 <div id="container">
 <h1>Hacker News</h1>
 <%= render 'shared/flash_messages' %>
-<%= render 'shared/header' %>
-<%= yield %>
+ <%= yield %>
 </div>
 
 

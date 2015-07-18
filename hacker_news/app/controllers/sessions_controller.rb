@@ -1,9 +1,5 @@
 class SessionsController < ApplicationController
 
-  # def new
-  #   @user = User.new
-  # end
-
   def create
     user = User.find_by(username: params[:username])
     if user && user.authenticate(params[:password])
@@ -19,8 +15,4 @@ class SessionsController < ApplicationController
     redirect_to :root
   end
 
-  # private
-  # def user_params
-  #   params.require(:user).permit(:username, :password)
-  # end
 end
