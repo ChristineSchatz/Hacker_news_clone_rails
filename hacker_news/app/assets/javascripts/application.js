@@ -16,7 +16,6 @@
 //= require_tree .
 
 $(document).ready(function() {
-$.ajaxSetup({ cache: false });
   $('.vote-count').on('click', function(event) {
     event.preventDefault();
     $target = $(event.target);
