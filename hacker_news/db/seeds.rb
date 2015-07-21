@@ -12,6 +12,8 @@ users = [
   { username: "Zack", password: "1234"},
   { username: "George", password: "123"},
 ]
+#ZM: You can do this too!
+.each{|x| user.create(x)}
 
 posts = [
    { title: "The Web’s Cruft Problem", body: "Blah blah blah blah", user_id: 1, votes: 0},
