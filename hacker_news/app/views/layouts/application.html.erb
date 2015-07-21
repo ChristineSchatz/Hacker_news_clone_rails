@@ -7,16 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-     <nav>
-       <%= render 'shared/header' %>
-    </nav>
-
+  <nav>
+    <%= render 'shared/header' %>
+  </nav>
 <div id="container">
-<h1>Hacker News</h1>
+  <h1>Hacker News</h1>
 <%= render 'shared/flash_messages' %>
- <%= yield %>
+
+<%= yield %>
 </div>
-
-
 </body>
 </html>

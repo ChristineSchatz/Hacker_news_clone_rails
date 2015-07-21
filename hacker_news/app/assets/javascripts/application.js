@@ -14,22 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function() {
-  $('.vote-count').on('click', function(event) {
-    event.preventDefault();
-    $target = $(event.target);
-    // my user can vote as many times. cheating is allowed! nobody cares...! votes are good!
-    //$target.attr("disabled", "true");
-    $form = $target.parent();
-
-     $.ajax( {
-        type: $form.attr('method'),
-        url: $form.attr('action'),
-        data: $target.serialize(),
-        dataType: "JSON"
-     }).done(function(response) {
-       $form.parent().children('.vote-area').html(response.post_votes);
-     });
-  });
-});

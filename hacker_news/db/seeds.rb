@@ -10,7 +10,7 @@ users = [
   { username: "Alina", password: "12345"},
   { username: "Anna", password: "12345"},
   { username: "Zack", password: "1234"},
-  { username: "George", password: "123"},
+  { username: "Vic", password: "123"},
 ]
 
 posts = [

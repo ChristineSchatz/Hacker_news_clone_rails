@@ -5,6 +5,18 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  resources :users
+
+  resources :posts do
+    resources :comments, except: [:index]
+  end
+
+  get '/login' => "sessions#new"
+  post '/login' => "sessions#create"
+  get '/signup' => "users#new"
+  get '/logout' => "sessions#destroy"
+
+  get '/posts/:id/up_vote' => "posts#up_vote", as: :up_vote
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

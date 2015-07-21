@@ -1,8 +1,0 @@
-<h4>Your posts</h4>
-<% @user_posts.each do |post| %>
- <div><%= link_to post.title, post_path(post) %> </div>
-
-  <%end %>
-  <br><br>
-<div><%= link_to "CREATE NEW POST!", new_post_path %></div>
-<div><%= link_to "back home", :root %></div>
