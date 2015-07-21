@@ -3,6 +3,9 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
     @post = Post.find(params[:post_id])
+    if request.xhr?
+      render partial: "form", layout: false
+    end
   end
 
   def create

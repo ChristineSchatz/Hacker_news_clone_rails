@@ -32,4 +32,18 @@ $(document).ready(function() {
        $form.parent().children('.vote-area').html(response.post_votes);
      });
   });
+
+  $('#comment_link').on('click', function(event) {
+    event.preventDefault();
+    $.ajax({
+        url: $("#comment_link").attr('href'),
+        method: 'get'
+    }).done(function(response) {
+        $('#comment_area').append(response);
+        $('#comment_link').hide();
+        console.log(response);
+    })
+
+  });
+
 });
