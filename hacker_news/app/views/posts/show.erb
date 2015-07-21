@@ -2,6 +2,7 @@
 <div><%= @post.body %></div>
 <br>
 <h5>comments:</h5>
+<!-- if you wanna show user's user name just say post.username -->
 <div id="comments">
 <% @post.comments.each do |comment| %>
   <li><%= comment.body %></li><br>
