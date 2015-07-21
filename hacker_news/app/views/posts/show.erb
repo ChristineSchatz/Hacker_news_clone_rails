@@ -10,7 +10,8 @@
 <br>
 <br>
 <!-- add thing where you only see edit and delete links if it was posted by YOU! -->
+<div id="comment_area">
 <% if show_edit_actions(@post) %>
-<div id="comment_area"><%= link_to 'comment', new_post_comment_path(@post), :id => "comment_link" %> | <%= link_to 'edit', edit_post_path(@post) %> | <%= link_to 'delete', @post, :method => :delete %></div>
+| <%= link_to 'edit', edit_post_path(@post) %> | <%= link_to 'delete', @post, :method => :delete %>
  <% end %>
-
+<%= link_to 'comment', new_post_comment_path(@post), :id => "comment_link" %> </div>
