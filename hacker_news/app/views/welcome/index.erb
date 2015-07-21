@@ -1,4 +1,5 @@
 <% @posts.each_with_index do |post, i| %>
-<div><%= "#{i+1}." %><%= link_to (post.title), post_path(post.id) %> (posted by: <%= find_user(post)%> ) votes: 0</div><br>
-
+<div><%= "#{i+1}." %><%= link_to (post.title), post_path(post.id) %> (posted by: <%= find_user(post)%> ) votes: 0
+ <span class="small"><%= post.created_at %></small></div>
+ <br>
   <% end %>

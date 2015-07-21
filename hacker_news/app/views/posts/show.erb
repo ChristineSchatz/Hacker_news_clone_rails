@@ -1,0 +1,7 @@
+<div> <%= @post.title %> </div>
+<div> <%= @post.body  %> </div>
+<br>
+<h5>comments</h5>
+<span class="comments">
+<%= link_to "comment!", new_post_comment_path(@post) %>
+</span>
