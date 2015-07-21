@@ -13,8 +13,9 @@ class CommentsController < ApplicationController
     comment = Comment.new(comment_params)
     comment.post = post
     comment.user_id = session[:user_id]
-    if comment.save
-      redirect_to post, notice: "Comment added!"
+    if comment.save && request.xhr?
+      render json: {data: comment.body}.to_json
+      #redirect_to post, notice: "Comment added!"
     else
       redirect_to post, notice: {errors: "Invalid comment."}
     end

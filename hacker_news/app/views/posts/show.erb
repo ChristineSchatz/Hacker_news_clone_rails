@@ -2,11 +2,11 @@
 <div><%= @post.body %></div>
 <br>
 <h5>comments:</h5>
-<span class="comments">
+<div id="comments">
 <% @post.comments.each do |comment| %>
   <li><%= comment.body %></li><br>
 <% end %>
-</span>
+</div>
 <br>
 <br>
 <div id="comment_area"><%= link_to 'comment', new_post_comment_path(@post), :id => "comment_link" %> | <%= link_to 'edit', edit_post_path(@post) %> | <%= link_to 'delete', @post, :method => :delete %></div>

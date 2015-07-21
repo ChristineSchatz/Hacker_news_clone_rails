@@ -41,9 +41,22 @@ $(document).ready(function() {
     }).done(function(response) {
         $('#comment_area').append(response);
         $('#comment_link').hide();
-        console.log(response);
+    })
+  });
+
+  $("#comment_area").on('submit', $('#new_comment'), function(event) {
+    event.preventDefault();
+    $.ajax({
+        url: $('#new_comment').attr('action'),
+        method: 'post',
+        data: $('#new_comment').serialize(),
+        dataType: "JSON"
+
+    }).done(function(response) {
+        $('#comments').append(response.data);
+        $('#new_comment')[0].reset();
+        console.log(response.data);
     })
 
   });
-
 });
