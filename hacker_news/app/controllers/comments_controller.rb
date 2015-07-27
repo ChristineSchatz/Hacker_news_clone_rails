@@ -9,13 +9,11 @@ class CommentsController < ApplicationController
   end
 
   def create
-    post = Post.find_by_id(params[:post_id])
     comment = Comment.new(comment_params)
-    comment.post = post
+    #comment.post_id = params[:post_id] Remove line 12 / 14
     comment.user_id = session[:user_id]
     if comment.save && request.xhr?
       render json: {data: comment.body}.to_json
-      #redirect_to post, notice: "Comment added!"
     else
       redirect_to post, notice: {errors: "Invalid comment."}
     end

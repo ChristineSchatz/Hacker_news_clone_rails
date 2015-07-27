@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+
+  #ZM: Hey! See all of this comment stuff that rails puts in here for you,
+  # Make sure you remove it! 
   root 'welcome#index'
   resources :users
 

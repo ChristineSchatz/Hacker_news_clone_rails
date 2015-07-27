@@ -5,8 +5,11 @@ class PostsController < ApplicationController
   end
 
   def create
+    #ZM: Use find_by(id:)
+    #ZM: Also going to the Database to get the user is not necessary here
     user = User.find_by_id(session[:user_id])
     post = Post.new(post_params)
+    #ZM: Instead do post.user_id = session[:user_id] & remove line below
     post.user = user
     post.save
     redirect_to :root
@@ -14,6 +17,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by_id(params[:id])
+    #ZM: you don't need user here
     @user = User.find_by(params[:user_id])
   end
 
@@ -31,7 +35,7 @@ class PostsController < ApplicationController
     @post.increment!(:votes)
     @post_votes = @post.votes
     if request.xhr?
-      render json: {post_votes: @post_votes}.to_json
+      render json: {post_id: @post.id, post_votes: @post_votes}.to_json
     else
       redirect_to @post
     end
