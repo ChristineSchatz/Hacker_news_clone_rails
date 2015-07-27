@@ -49,4 +49,3 @@ group :development, :test do
 end
 
 
-rails g rpsec:install
