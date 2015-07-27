@@ -5,20 +5,15 @@ class PostsController < ApplicationController
   end
 
   def create
-    #ZM: Use find_by(id:)
-    #ZM: Also going to the Database to get the user is not necessary here
-    user = User.find_by_id(session[:user_id])
+    user = User.find_by(id: session[:user_id])
     post = Post.new(post_params)
-    #ZM: Instead do post.user_id = session[:user_id] & remove line below
-    post.user = user
+    post.user_id = session[:user_id]
     post.save
     redirect_to :root
   end
 
   def show
     @post = Post.find_by_id(params[:id])
-    #ZM: you don't need user here
-    @user = User.find_by(params[:user_id])
   end
 
   def edit
@@ -26,8 +21,13 @@ class PostsController < ApplicationController
   end
 
   def update
-    Post.update(params[:id], post_params)
-    redirect_to :root
+    @post = Post.update(params[:id], post_params)
+    if @post.save
+     redirect_to :root
+    else
+     flash[:errors] = @post.errors.full_messages
+     render :edit
+   end
   end
 
   def up_vote
