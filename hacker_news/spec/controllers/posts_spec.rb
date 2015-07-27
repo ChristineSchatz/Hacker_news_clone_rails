@@ -9,8 +9,21 @@ RSpec.describe PostsController, :type => :controller do
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(test_user)
   end
 
-  describe "#show" do
+  describe "#new" do
+    it "renders a new post form" do
+      get :new
+      expect(response).to render_template("new")
+    end
+  end
 
+  describe "#create" do
+    it "creates a new post" do
+    post :create, {id: sample_post.id, post:{title: "PINEAPPLE"}}
+    expect(response).to redirect_to root_path
+    end
+  end
+
+  describe "#show" do
     it "shows a post" do
       get :show, id: sample_post.id
       expect(assigns(:post)).to eq(sample_post)
@@ -22,19 +35,18 @@ RSpec.describe PostsController, :type => :controller do
     end
   end
 
-    describe "#update" do
-      it "saves an update" do
-        put :update, {id: sample_post.id, post:{title: "COOL YEAH!"}}
-        expect(response).to redirect_to root_path
-      end
-
-    it "won't save a bad update" do
-      old_title = sample_post.title
-      put :update, {id: sample_post.id, post:{title: nil}}
-      expect(response).to render_template("edit")
-      expect(sample_post.reload.title).to eq(old_title)
+  describe "#update" do
+    it "saves an update" do
+      put :update, {id: sample_post.id, post:{title: "COOL YEAH!"}}
+      expect(response).to redirect_to post_path(sample_post)
     end
-end
+
+  it "won't save a bad update" do
+    old_title = sample_post.title
+    put :update, {id: sample_post.id, post:{title: nil}}
+    expect(sample_post.reload.title).to eq(old_title)
+   end
+  end
 
   describe "#delete" do
     it "deletes the post" do
@@ -47,4 +59,5 @@ end
       expect(Post.where(id: sample_post.id).count).to eq(0)
     end
   end
+
 end

@@ -23,10 +23,10 @@ class PostsController < ApplicationController
   def update
     @post = Post.update(params[:id], post_params)
     if @post.save
-     redirect_to :root
+     redirect_to post_path(@post)
     else
      flash[:errors] = @post.errors.full_messages
-     render :edit
+     redirect_to edit_post_path(@post)
    end
   end
 
