@@ -4,17 +4,17 @@
       <li><h4><%= link_to "new", new_post_path%></h4></li> |
     <li><h4>comments</h4></li>
     <% else %>
-      <li>New to Hacker News? sign up here<%=form_for @user do |f|%>
-          <%= f.text_field :username %>
-          <%= f.password_field :password %>
+      <li>New to Hacker News? sign up here<%=form_for @user, html: {id: :sign_up} do |f|%>
+          <%= f.text_field :username, html: {id: :username} %>
+          <%= f.password_field :password, html: {id: :password} %>
           <%= f.submit %>
       <% end %>
     </li>
       <li>Already a user? <%=form_tag controller: 'sessions', action: :create do%>
         <%= label_tag :username%>
-        <%= text_field_tag :username%>
+        <%= text_field_tag :username %>
         <%= label_tag :password%>
-        <%= password_field_tag :password%>
+        <%= password_field_tag :password %>
         <%= submit_tag "Log In"%>
         <% end %>
       <%end%>

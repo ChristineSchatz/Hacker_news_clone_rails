@@ -43,6 +43,10 @@ class PostsController < ApplicationController
 
   def destroy
     Post.find_by_id(params[:id]).destroy
+    # if target.destroy
+      #   redirect_to topics_path
+      # # else
+      # redirect to topic_path(target)
     redirect_to :root
   end
 
