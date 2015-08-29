@@ -9,8 +9,9 @@ class CommentsController < ApplicationController
   end
 
   def create
+    post = Post.find(params[:post_id])
     comment = Comment.new(comment_params)
-    #comment.post_id = params[:post_id] Remove line 12 / 14?
+    comment.post_id = params[:post_id] #Remove line 12 / 14?
     comment.user_id = session[:user_id]
     if comment.save && request.xhr?
       render json: {data: comment.body}.to_json
