@@ -17297,3 +17297,555 @@ Processing by WelcomeController#index as HTML
   Rendered shared/_header.erb (2.1ms)
   Rendered shared/_flash_messages.erb (0.1ms)
 Completed 200 OK in 81ms (Views: 70.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2015-08-29 16:14:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (2.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mPost Load (2.5ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at desc
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/index.erb within layouts/application (61.5ms)
+  Rendered shared/_header.erb (9.5ms)
+  Rendered shared/_flash_messages.erb (0.4ms)
+Completed 200 OK in 1029ms (Views: 996.3ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/application.self-a12ab57c895a1b548b9ab5faafb893ea0a5ec58b96972af35a817822d22dbd1c.css?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/main.self-28570e975417bc24327a575939123d03137140f0b7dad681280c203f235d427e.js?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-08-29 16:14:27 -0400
+
+
+Started GET "/" for ::1 at 2015-08-29 16:29:37 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at desc[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.erb within layouts/application (7.8ms)
+  Rendered shared/_header.erb (1.5ms)
+  Rendered shared/_flash_messages.erb (0.1ms)
+Completed 200 OK in 119ms (Views: 116.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/application.self-b10414939bd239af67dc69cbecb4ff5ef44268b7f658c664d09715620c582156.css?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/main.self-28570e975417bc24327a575939123d03137140f0b7dad681280c203f235d427e.js?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-08-29 16:29:37 -0400
+
+
+Started GET "/" for ::1 at 2015-08-29 16:31:16 -0400
+Processing by WelcomeController#index as HTML
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at desc
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/index.erb within layouts/application (8.7ms)
+  Rendered shared/_header.erb (1.4ms)
+  Rendered shared/_flash_messages.erb (0.1ms)
+Completed 200 OK in 120ms (Views: 118.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/application.self-4ed3d2b64602cc22f2debae444007aa2d93b2e0d44555cae0b857303133d3384.css?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/main.self-28570e975417bc24327a575939123d03137140f0b7dad681280c203f235d427e.js?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-08-29 16:31:16 -0400
+
+
+Started GET "/" for ::1 at 2015-08-29 16:33:14 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts"  ORDER BY created_at desc[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/index.erb within layouts/application (6.0ms)
+  Rendered shared/_header.erb (1.4ms)
+  Rendered shared/_flash_messages.erb (0.1ms)
+Completed 200 OK in 112ms (Views: 110.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/application.self-7494085f05866bb6559b348d05378c3bb6b7582c78ffe10d93115c4b24b4f482.css?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/main.self-28570e975417bc24327a575939123d03137140f0b7dad681280c203f235d427e.js?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-08-29 16:33:14 -0400
+
+
+Started GET "/" for ::1 at 2015-08-29 16:36:16 -0400
+Processing by WelcomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at desc
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/index.erb within layouts/application (6.2ms)
+  Rendered shared/_header.erb (2.4ms)
+  Rendered shared/_flash_messages.erb (0.2ms)
+Completed 200 OK in 117ms (Views: 60.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/application.self-e7856a6fb71ca47514bcce3f56a27cb3af32510045ece14d682a737bc8fea542.css?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/main.self-28570e975417bc24327a575939123d03137140f0b7dad681280c203f235d427e.js?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2015-08-29 16:36:16 -0400
+
+
+Started GET "/posts/8" for ::1 at 2015-08-29 16:36:19 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.erb within layouts/application (9.5ms)
+  Rendered shared/_header.erb (2.8ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.3ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4:       <li><h4><%= link_to "new", new_post_path%></h4></li> |
+    5:     <li><h4>comments</h4></li>
+    6:     <% else %>
+    7:       <li>New to Hacker News? sign up here<%=form_for @user, html: {id: :sign_up} do |f|%>
+    8:           <%= f.text_field :username, html: {id: :username} %>
+    9:           <%= f.password_field :password, html: {id: :password} %>
+   10:           <%= f.submit %>
+  app/views/shared/_header.erb:7:in `_app_views_shared__header_erb__2713584720732754950_70184079294360'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3426016493127394449_70184068500480'
+
+
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.0ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (40.8ms)
+
+
+Started GET "/posts/8" for ::1 at 2015-08-29 16:36:19 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mPost Load (0.6ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 8]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered posts/show.erb within layouts/application (4.9ms)
+  Rendered shared/_header.erb (1.5ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    4:       <li><h4><%= link_to "new", new_post_path%></h4></li> |
+    5:     <li><h4>comments</h4></li>
+    6:     <% else %>
+    7:       <li>New to Hacker News? sign up here<%=form_for @user, html: {id: :sign_up} do |f|%>
+    8:           <%= f.text_field :username, html: {id: :username} %>
+    9:           <%= f.password_field :password, html: {id: :password} %>
+   10:           <%= f.submit %>
+  app/views/shared/_header.erb:7:in `_app_views_shared__header_erb__2713584720732754950_70184078237800'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3426016493127394449_70184068500480'
+
+
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.4ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (15.8ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.6ms)
+
+
+Started POST "/login" for ::1 at 2015-08-29 16:36:28 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8mL8d0z5n3e5rjoC8A8eXbsrv5oDmkXL/trjKR0NiPIuIUQj6AyV9MN9V2iX1TEaF2ntUkLJcB/aQv8tcecQ7g==", "username"=>"frenchiefun", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "frenchiefun"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2015-08-29 16:36:28 -0400
+Processing by WelcomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at desc
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/index.erb within layouts/application (6.9ms)
+  Rendered shared/_header.erb (1.4ms)
+  Rendered shared/_flash_messages.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/login" for ::1 at 2015-08-29 16:36:49 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WGJksNO9JnU+uQ7q4FJEvqg9f/E96TZod+nqJmr7anuEIdzkd0gs9kRqY4CHiGv5BH8tOXy6A7xTcfYiBhHyZw==", "username"=>"Alina", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1[0m  [["username", "Alina"]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 71ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-29 16:36:49 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1  ORDER BY created_at desc[0m  [["user_id", 1]]
+  Rendered users/show.erb within layouts/application (2.1ms)
+  Rendered shared/_header.erb (0.3ms)
+  Rendered shared/_flash_messages.erb (0.1ms)
+Completed 200 OK in 96ms (Views: 93.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for ::1 at 2015-08-29 16:37:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = $1  ORDER BY created_at desc[0m  [["user_id", 1]]
+  Rendered users/show.erb within layouts/application (1.7ms)
+  Rendered shared/_header.erb (0.3ms)
+  Rendered shared/_flash_messages.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-08-29 16:37:11 -0400
+Processing by WelcomeController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"  ORDER BY created_at desc
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/index.erb within layouts/application (6.6ms)
+  Rendered shared/_header.erb (0.3ms)
+  Rendered shared/_flash_messages.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/6" for ::1 at 2015-08-29 16:37:16 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1  [["post_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered posts/show.erb within layouts/application (1.8ms)
+  Rendered shared/_header.erb (0.2ms)
+  Rendered shared/_flash_messages.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/6/comments/new" for ::1 at 2015-08-29 16:37:19 -0400
+Processing by CommentsController#new as HTML
+  Parameters: {"post_id"=>"6"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered comments/_form.erb (59.0ms)
+  Rendered comments/new.erb within layouts/application (60.0ms)
+  Rendered shared/_header.erb (0.3ms)
+  Rendered shared/_flash_messages.erb (0.1ms)
+Completed 200 OK in 102ms (Views: 96.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts/6/comments" for ::1 at 2015-08-29 16:37:29 -0400
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eupOPvej2ehgXs7BoJUWfLmHlP4hPGgguXwf8qzv3iimqfZqU1bTaxqNo6vHTzk7FcXGNmBvXfSd5AP2wAVGNA==", "comment"=>{"body"=>"Oh boy"}, "commit"=>"submit comment!", "post_id"=>"6"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (8.1ms)[0m  INSERT INTO "comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["body", "Oh boy"], ["user_id", 1], ["created_at", "2015-08-29 20:37:29.552194"], ["updated_at", "2015-08-29 20:37:29.552194"]]
+PG::NotNullViolation: ERROR:  null value in column "post_id" violates not-null constraint
+DETAIL:  Failing row contains (1, Oh boy, 1, null, 2015-08-29 20:37:29.552194, 2015-08-29 20:37:29.552194).
+: INSERT INTO "comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 8.4ms)
+
+ActiveRecord::StatementInvalid (PG::NotNullViolation: ERROR:  null value in column "post_id" violates not-null constraint
+DETAIL:  Failing row contains (1, Oh boy, 1, null, 2015-08-29 20:37:29.552194, 2015-08-29 20:37:29.552194).
+: INSERT INTO "comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"):
+  app/controllers/comments_controller.rb:15:in `create'
+
+
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.8ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (67.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.0ms)
+
+
+Started POST "/posts/6/comments" for ::1 at 2015-08-29 16:37:50 -0400
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bOtY+6yTOVXz4BiYt848jKSlKvUyW08RerQfIltdSRawqOCvCGYz1okzdfLQFBPLCOd4PXMIesVeLAMmN7fRCg==", "comment"=>{"body"=>"Oh boy"}, "commit"=>"submit comment!", "post_id"=>"6"}
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "Oh boy"], ["user_id", 1], ["created_at", "2015-08-29 20:37:50.805352"], ["updated_at", "2015-08-29 20:37:50.805352"]]
+PG::NotNullViolation: ERROR:  null value in column "post_id" violates not-null constraint
+DETAIL:  Failing row contains (2, Oh boy, 1, null, 2015-08-29 20:37:50.805352, 2015-08-29 20:37:50.805352).
+: INSERT INTO "comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.4ms)
+
+ActiveRecord::StatementInvalid (PG::NotNullViolation: ERROR:  null value in column "post_id" violates not-null constraint
+DETAIL:  Failing row contains (2, Oh boy, 1, null, 2015-08-29 20:37:50.805352, 2015-08-29 20:37:50.805352).
+: INSERT INTO "comments" ("body", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"):
+  app/controllers/comments_controller.rb:15:in `create'
+
+
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/christineschatz/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (28.7ms)

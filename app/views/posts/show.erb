@@ -1,16 +1,11 @@
 <div><%= @post.title %></div>
 <div><%= @post.body %></div>
-<br>
 <h5>comments:</h5>
-<!-- if you wanna show user's user name just say post.username -->
 <div id="comments">
 <% @post.comments.each do |comment| %>
   <li><%= comment.body %></li><br>
 <% end %>
 </div>
-<br>
-<br>
-<!-- add thing where you only see edit and delete links if it was posted by YOU! -->
 <div id="comment_area">
 <% if show_edit_actions(@post) %>
 | <%= link_to 'edit', edit_post_path(@post) %> | <%= link_to 'delete', @post, :method => :delete %>
