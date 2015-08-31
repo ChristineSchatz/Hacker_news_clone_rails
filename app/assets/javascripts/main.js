@@ -2,7 +2,6 @@ $(document).on('ready page:load',function() {
   // $('.vote-count').on('click', function(event) {
   //   event.preventDefault();
   //   $target = $(event.target);
-  //   // my user can vote as many times. cheating is allowed! nobody cares...! votes are good!
   //   //$target.attr("disabled", "true");
   //   $form = $target.parent();
 
@@ -40,7 +39,7 @@ $(document).on('ready page:load',function() {
 
   // YOu don't need to run the $() on the filter, just use the selector
   // $("#comment_area").on('submit', '#new_comment', function(e){})
-  $("#comment_area").on('submit', $('#new_comment'), function(event) {
+  $("#comment_area").on('submit', '#new_comment', function(event) {
     event.preventDefault();
     $.ajax({
         url: $('#new_comment').attr('action'),
