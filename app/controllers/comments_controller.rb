@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+  before_action :require_login, only: [:create]
+
   def new
     @comment = Comment.new
     @post = Post.find(params[:post_id])
@@ -14,7 +16,7 @@ class CommentsController < ApplicationController
     if comment.save && request.xhr?
       render json: {data: comment.body}.to_json
     else
-      redirect_to comment, notice: {errors: "Invalid comment."}
+      redirect_to :root, notice: "You must be logged in to comment."
     end
   end
 
