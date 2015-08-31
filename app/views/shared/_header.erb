@@ -1,8 +1,8 @@
   <% if session[:user_id] %>
       <%= link_to "Logout", logout_path %>&nbsp
       <%= link_to "Your Profile Page", user_path(session[:user_id]) %>
-      <li><h4><%= link_to "new", new_post_path%></h4></li> |
-    <li><h4>comments</h4></li>
+      <li><h4><%= link_to "new", new_post_path %></h4></li> |
+    <li><h4><%= link_to "home", :root %></h4></li>
     <% else %>
       <li>New to Hacker News? sign up here<%=form_for @user, html: {id: :sign_up} do |f|%>
           <%= f.text_field :username, html: {id: :username} %>
