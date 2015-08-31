@@ -15,8 +15,12 @@ class PostsController < ApplicationController
     user = User.find_by(id: session[:user_id])
     post = Post.new(post_params)
     post.user_id = session[:user_id]
-    post.save
-    redirect_to :root
+    if post.save
+      flash[:notice] = "Your profile has been updated!"
+      redirect_to :root
+    else
+      flash[:errors] = user.errors.full_messages
+      redirect_to :post
   end
 
   def show

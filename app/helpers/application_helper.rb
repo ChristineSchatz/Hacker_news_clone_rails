@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def is_authenticated?
-    !!session[:user_id]
+    !!current_user
   end
 
 end
