@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('ready page:load',function() {
   // $('.vote-count').on('click', function(event) {
   //   event.preventDefault();
   //   $target = $(event.target);
@@ -19,7 +19,7 @@ $(document).ready(function() {
   $('.upvote-form').on('submit',function(event){
     event.preventDefault();
     var target = event.target;
-    var action = target.action; 
+    var action = target.action;
     var method = target.method;
 
     $.ajax({url: action, method: method}).done(function(response){
