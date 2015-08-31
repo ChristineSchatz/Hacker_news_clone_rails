@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-  #before_action :require_login, except: :index
+  before_action :require_login, except: [:index, :show]
 
   def index
     @user = User.new
@@ -16,11 +16,12 @@ class PostsController < ApplicationController
     post = Post.new(post_params)
     post.user_id = session[:user_id]
     if post.save
-      flash[:notice] = "Your profile has been updated!"
+      flash[:notice] = "Your post has been saved!"
       redirect_to :root
     else
       flash[:errors] = user.errors.full_messages
       redirect_to :post
+    end
   end
 
   def show
@@ -35,6 +36,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.update(params[:id], post_params)
     if @post.save
+     flash[:notice] = "Your post has been succesfully updated!"
      redirect_to post_path(@post)
     else
      flash[:errors] = @post.errors.full_messages
@@ -55,15 +57,11 @@ class PostsController < ApplicationController
 
   def destroy
     Post.find_by_id(params[:id]).destroy
-    # if target.destroy
-      #   redirect_to topics_path
-      # # else
-      # redirect to topic_path(target)
     redirect_to :root
   end
 
   private
   def post_params
-    params.require(:post).permit(:title, :body, :user_id)
+    params.require(:post).permit(:title, :body).merge(user_id: current_user.id)
   end
 end
