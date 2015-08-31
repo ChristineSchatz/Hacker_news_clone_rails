@@ -25,12 +25,12 @@ ActiveRecord::Schema.define(version: 20150716152409) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.string   "body",       null: false
-    t.integer  "votes"
-    t.integer  "user_id",    null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",                  null: false
+    t.string   "body",                   null: false
+    t.integer  "votes",      default: 0
+    t.integer  "user_id",                null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|

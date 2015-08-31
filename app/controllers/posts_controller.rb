@@ -2,6 +2,11 @@ class PostsController < ApplicationController
 
   #before_action :require_login, except: :index
 
+  def index
+    @user = User.new
+    @posts = Post.all.order('created_at desc')
+  end
+
   def new
     @post = Post.new
   end
@@ -15,6 +20,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @user = User.new
     @post = Post.find_by_id(params[:id])
   end
 
