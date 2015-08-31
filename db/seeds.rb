@@ -11,22 +11,29 @@ users = [
   { username: "Anna", password: "12345"},
   { username: "Zack", password: "1234"},
   { username: "George", password: "123"},
-]
+  { username: "Daniel", password: "12345"},
+  { username: "Jerry", password: "12345"},
+  { username: "Michelle", password: "12345"}
+].each { |user| User.create(user) }
 
 posts = [
+   { title: "N8VEM – Homebrew Computing Project", body: "Blah blah blah", user_id: 6, votes: 0},
+   { title: "OS X Command Line Utilities", body: "Blah blah blah", user_id: 2, votes: 0},
    { title: "The Web’s Cruft Problem", body: "Blah blah blah blah", user_id: 1, votes: 0},
-   { title: "Finnish Defence Forces Cyber Challenge", body: "Blah blah blah blah", user_id: 2, votes: 0},
+   { title: "Can we ever really know another person?", body: "Blah blah blah", user_id: 7, votes: 0},
+   { title: "Finnish Defence Forces Cyber Challenge", body: "Blah blah blah blah", user_id: 5, votes: 0},
    { title: "How to learn data science", body: "Blah blah blah blah blah", user_id: 3, votes: 0},
-   { title: "Finnish Defence Forces Cyber Challenge", body: "Blah blah blah blah", user_id: 4, votes: 0},
+   { title: "The psychedelic state in light of integrated information theory", body: "Blah blah blah blah", user_id: 4, votes: 0},
+   { title: "Diet Advice That Ignores Hunger", body: "Blah blah blah blah", user_id: 1, votes: 0},
    { title: "Estimate the cost of a Web, iOS or Android app", body: "Blah blah blah blah", user_id: 3, votes: 0},
-   { title: "Pyxley: Python Powered Dashboards", body: "blah blah blah", user_id: 3, votes: 0},
-   { title: "RethinkDB 2.1 beta: automatic failover with Raft", body: "blah blah blah", user_id: 2, votes: 0}
-]
+   { title: "Pyxley: Python Powered Dashboards", body: "blah blah blah", user_id: 4, votes: 0},
+   { title: "RethinkDB 2.1 beta: automatic failover with Raft", body: "blah blah blah", user_id: 5, votes: 0}
+].each { |post| Post.create(post) }
 
-users.each do |user|
-  User.create(user)
-end
+# users.each do |user|
+#   User.create(user)
+# end
 
-posts.each do |post|
-  Post.create(post)
-end
+# posts.each do |post|
+#   Post.create(post)
+# end
