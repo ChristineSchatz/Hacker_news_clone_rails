@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 users = [
   { username: "Alina", password: "12345"},
   { username: "Anna", password: "12345"},
@@ -30,10 +22,3 @@ posts = [
    { title: "RethinkDB 2.1 beta: automatic failover with Raft", body: "http://hermann.io/sofia.cremin", user_id: 5, votes: 0}
 ].each { |post| Post.create(post) }
 
-# users.each do |user|
-#   User.create(user)
-# end
-
-# posts.each do |post|
-#   Post.create(post)
-# end
